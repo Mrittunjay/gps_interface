@@ -2,7 +2,6 @@
 #include <stdint.h>
 #include "uart_driv.h"
 
-/**********************FOR UART1*****************************************************/
 void Uart1Init (void)  {               	   
     PINSEL0 |= 0x00050000;                                
     U1LCR = 0x83;										           
@@ -28,5 +27,3 @@ unsigned char Uart1GetCh (void)	{
   while (!(U1LSR & 0x01));
   return (U1RBR);
 }
-/**************************************************************************************/
-
